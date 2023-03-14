@@ -1,4 +1,5 @@
 import pandas as pd
+import json
 
 
 class SMA_Calcuation:
@@ -25,4 +26,4 @@ class SMA_Calcuation:
         except:
             return {"Error_Message": "Unable to Calculate SMA due to price error"}
 
-        return self.sma_data_df.to_json(orient="records")
+        return json.loads(self.sma_data_df.to_json(orient="records"))

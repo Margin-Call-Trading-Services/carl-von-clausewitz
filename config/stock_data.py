@@ -15,3 +15,10 @@ class MACDData(BaseModel):
     macd_smooth: int
     price_type: str
     data: list[dict]
+
+
+class RSIData(BaseModel):
+    ticker: str
+    rsi_interval: int
+    price_type: str
+    data: list[dict]

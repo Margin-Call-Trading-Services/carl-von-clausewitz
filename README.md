@@ -53,6 +53,8 @@ Example for macd_data:
 # TODO and Notes for myself
 
 ## TODO List
+  - Need to adjust indicators to digest different interval data (min, hrs, days, weeks, etc)
+  - Need to write unit tests
   - Need to add RSI indicator
   - Need to add bollinger bands
   - Look into other indicators, check this website: https://www.investopedia.com/top-7-technical-analysis-tools-4773275

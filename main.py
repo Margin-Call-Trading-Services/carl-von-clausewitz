@@ -1,9 +1,9 @@
 from fastapi import Body, FastAPI
 
-from config.stock_data import SMAData, MACDData
+from config.stock_data import SMAData, MACDData, RSIData
 from strategies.macd_calculation import MACD_Calculation
 from strategies.sma_calculation import SMA_Calcuation
-
+from strategies.rsi_calculation import RSI_Calculation
 
 app = FastAPI()
 
@@ -44,4 +44,17 @@ def calculate_macd(stock_data: MACDData):
         return {
             "Error_Message": "Unable to calculate MACD due to incorrect json data format"
         }
+
     return MACD_Class.calculate_macd()
+
+
+@app.post("/rsi")
+def calculate_macd(stock_data: RSIData):
+    RSI_Class = RSI_Calculation(
+        stock_data.ticker,
+        stock_data.rsi_interval,
+        stock_data.price_type,
+        stock_data.data,
+    )
+
+    return RSI_Class.calculate_rsi()
