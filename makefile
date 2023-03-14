@@ -1,8 +1,5 @@
 start:
-	docker-compose up -d
+	docker-compose up --build
 
 kill:
 	docker-compose down
-
-build:
-	docker-compose build

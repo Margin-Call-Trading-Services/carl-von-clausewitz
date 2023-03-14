@@ -1,4 +1,5 @@
 import pandas as pd
+import json
 
 
 class MACD_Calculation:
@@ -54,4 +55,4 @@ class MACD_Calculation:
         except:
             return {"Error_Message": "Unable to calculate MACD from DataFame"}
 
-        return self.macd_data_df.to_json(orient="records")
+        return json.loads(self.macd_data_df.to_json(orient="records"))
