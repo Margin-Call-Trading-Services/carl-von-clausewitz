@@ -1,0 +1,10 @@
+{
+    "ticker": "aapl",
+    "start_date": "2023-01-01",
+    "end_date": "2023-03-17",
+    "stock_interval": "1d",
+    "macd_fast": 7,
+    "macd_slow": 14,
+    "macd_smooth": 9,
+    "price_type": "adj_close"
+}

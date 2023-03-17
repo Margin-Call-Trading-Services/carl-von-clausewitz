@@ -3,3 +3,6 @@ start:
 
 kill:
 	docker-compose down
+
+test:
+	docker-compose up --build
