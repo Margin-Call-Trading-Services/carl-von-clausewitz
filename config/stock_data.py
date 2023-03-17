@@ -1,24 +1,30 @@
 from pydantic import BaseModel
 
 
-class SMAData(BaseModel):
+class SMACall(BaseModel):
     ticker: str
-    sma_value: int
+    start_date: str
+    end_date: str
+    stock_interval: str
+    sma_interval: int
     price_type: str
-    data: list[dict]
 
 
-class MACDData(BaseModel):
+class MACDCall(BaseModel):
     ticker: str
+    start_date: str
+    end_date: str
+    stock_interval: str
     macd_fast: int
     macd_slow: int
     macd_smooth: int
     price_type: str
-    data: list[dict]
 
 
-class RSIData(BaseModel):
+class RSICall(BaseModel):
     ticker: str
+    start_date: str
+    end_date: str
+    stock_interval: str
     rsi_interval: int
     price_type: str
-    data: list[dict]

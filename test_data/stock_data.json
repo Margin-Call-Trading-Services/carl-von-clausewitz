@@ -1,7 +1,4 @@
 {
-    "ticker": "QQQ",
-    "rsi_interval": 14,
-    "price_type": "close",
     "data": [
         {
             "date": "2023-01-03",
